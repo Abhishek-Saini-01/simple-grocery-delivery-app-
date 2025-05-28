@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 4000;
 await connectDB();
 await connectToCloudinary();
 // Allow multiple origins
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173", "https://simple-grocery-delivery-app-fronten-fawn.vercel.app/"];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhook);
 
