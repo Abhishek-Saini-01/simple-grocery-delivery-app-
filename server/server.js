@@ -23,7 +23,11 @@ const allowedOrigins = [
   "http://localhost:5173",
 ];
 
-app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhook);
+app.post(
+  '/stripe',
+  express.raw({ type: 'application/json' }),
+  stripeWebhook
+);
 
 // Middleware configuration
 app.use(express.json());
